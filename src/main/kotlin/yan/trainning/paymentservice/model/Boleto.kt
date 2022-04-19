@@ -4,13 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.annotation.JsonTypeName
 
 @JsonTypeName("Boleto")
-class Boleto : PaymentMethod {
+data class Boleto(
     @JsonProperty("value")
     var value: Long? = null
-
-    constructor(value: Long?) {
-        this.value = value
-    }
-
-    constructor() {}
-}
+) : PaymentMethod

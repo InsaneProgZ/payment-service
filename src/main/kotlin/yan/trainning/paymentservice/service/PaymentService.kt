@@ -3,7 +3,6 @@ package yan.trainning.paymentservice.service
 import org.springframework.stereotype.Service
 import yan.trainning.paymentservice.model.Boleto
 import yan.trainning.paymentservice.model.Card
-import yan.trainning.paymentservice.model.Payment
 import yan.trainning.paymentservice.model.PaymentMethod
 
 @Service
