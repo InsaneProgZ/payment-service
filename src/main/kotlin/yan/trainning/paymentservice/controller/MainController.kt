@@ -20,7 +20,7 @@ class MainController(val factory: FactoryMethodPaymentService) {
 
     @PostMapping("/noFactory")
     fun checkPayment(@RequestBody payment: Payment): String {
-        return paymentService.paymentProcess(payment.paymentMethod)
+        return paymentService.paymentProcess(payment.paymentMethod).paymentProcess(payment.paymentMethod)
     }
 
     @PostMapping

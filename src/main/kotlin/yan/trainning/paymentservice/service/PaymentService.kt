@@ -15,11 +15,11 @@ class PaymentService {
         return "Card processed"
     }
 
-    fun paymentProcess(paymentMethod: PaymentMethod): String {
+    fun paymentProcess(paymentMethod: PaymentMethod): IPaymentService {
         return when (paymentMethod) {
-            is Card -> paymentProcess(paymentMethod)
-            is Boleto -> paymentProcess(paymentMethod)
-            else -> ""
+            is Card -> CardService()
+            is Boleto -> BoletoService()
+            else -> throw NotImplementedError()
         }
 
     }

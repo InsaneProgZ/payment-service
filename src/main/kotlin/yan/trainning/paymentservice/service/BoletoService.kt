@@ -6,10 +6,9 @@ import yan.trainning.paymentservice.clients.NotificationServiceClient
 import yan.trainning.paymentservice.model.PaymentMethod
 import yan.trainning.paymentservice.patterns.strategy.TaxStrategy
 
-@Service
 class BoletoService : IPaymentService {
 
-    val taxStrategy =  TaxStrategy()
+    private val taxStrategy =  TaxStrategy()
 
     private val notificationServiceClient: NotificationServiceClient = NotificationServiceClient()
     override fun paymentProcess(paymentMethod: PaymentMethod): String {

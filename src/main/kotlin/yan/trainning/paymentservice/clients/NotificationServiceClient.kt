@@ -17,7 +17,7 @@ class NotificationServiceClient {
 
     fun createNotification() {
         restTemplate.postForEntity<ResponseEntity<Void>>(
-            URI("http://127.0.0.1:8082/notification"),
+            URI("http://127.0.0.1:8084/notification"),
             NotificationServiceRequest("vendedor1", Status.PAID)
         )
     }
